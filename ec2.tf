@@ -3,5 +3,5 @@ resource "aws_instance" "test" {
   instance_type = "t2.micro"
   key_name = "aws_mizzy"
   security_groups = ["all"]
-  iam_instance_profile = "${aws_iam_instance_profile.test.name}"
+  iam_instance_profile = "${data.terraform_remote_state.global_iam.aws_iam_instance_profile_test_name}"
 }
