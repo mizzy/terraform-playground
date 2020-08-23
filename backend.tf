@@ -14,3 +14,7 @@ data "terraform_remote_state" "global_iam" {
     region = "ap-northeast-1"
   }
 }
+
+provider "aws" {
+  version = "~> 2.0"
+}
