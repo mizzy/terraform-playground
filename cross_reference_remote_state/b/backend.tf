@@ -1,20 +1,16 @@
 terraform {
   backend "s3" {
     bucket = "tfstate.mizzy"
-    key    = "flat.tfstate"
+    key    = "b.tfstate"
     region = "ap-northeast-1"
   }
 }
 
-data "terraform_remote_state" "global_iam" {
+data "terraform_remote_state" "a" {
   backend = "s3"
   config {
     bucket = "tfstate.mizzy"
-    key    = "global/iam.tfstate"
+    key    = "all.tfstate"
     region = "ap-northeast-1"
   }
-}
-
-provider "aws" {
-  version = "~> 2.0"
 }
