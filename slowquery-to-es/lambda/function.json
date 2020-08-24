@@ -6,7 +6,7 @@
     }
   },
   "Handler": "app.lambda_handler",
-  "Role": "arn:aws:iam::019115212452:role/rds-slowquery-to-es",
+  "Role": "{{ tfstate `aws_iam_role.rds_slowquery_to_es.arn` }}",
   "MemorySize": 128,
   "Runtime": "ruby2.5",
   "Timeout": 60,
