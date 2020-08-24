@@ -1,22 +1,3 @@
-data "aws_iam_policy_document" "slowquery_es_policy" {
-  statement {
-    effect = "Allow"
-
-    principals {
-      type        = "AWS"
-      identifiers = ["*"]
-    }
-
-    actions = [
-      "es:*",
-    ]
-
-    resources = [
-      "arn:aws:es:ap-northeast-1:${data.aws_caller_identity.current.account_id}:domain/slowquery/*", # FIXME:
-    ]
-  }
-}
-
 resource "aws_elasticsearch_domain" "slowquery" {
   domain_name           = "slowquery"
   elasticsearch_version = "7.7"
@@ -31,7 +12,13 @@ resource "aws_elasticsearch_domain" "slowquery" {
     volume_size = 35
   }
 
-  access_policies = data.aws_iam_policy_document.slowquery_es_policy.json
+  vpc_options {
+    subnet_ids = [
+      "subnet-0257d0837139a4d77",
+    ]
+
+    security_group_ids = ["sg-0e75f3c6ccbb8c468"]
+  }
 }
 
 output "ELASTICSEARCH_URL" {

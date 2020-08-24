@@ -2,12 +2,20 @@
   "FunctionName": "slowquery_to_es",
   "Environment": {
     "Variables": {
-      "ELASTICSEARCH_URL": "https://search-slowquery-bxhj4fbh3km3pipn2n7prmdncy.ap-northeast-1.es.amazonaws.com:443"
+      "ELASTICSEARCH_URL": "https://vpc-slowquery-bxhj4fbh3km3pipn2n7prmdncy.ap-northeast-1.es.amazonaws.com:443"
     }
   },
   "Handler": "app.lambda_handler",
   "Role": "arn:aws:iam::019115212452:role/rds-slowquery-to-es",
   "MemorySize": 128,
   "Runtime": "ruby2.5",
-  "Timeout": 60
+  "Timeout": 60,
+  "VpcConfig": {
+    "SubnetIds": [
+      "subnet-0257d0837139a4d77"
+    ],
+    "SecurityGroupIds": [
+      "sg-0e75f3c6ccbb8c468"
+    ]
+  }
 }

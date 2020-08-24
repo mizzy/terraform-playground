@@ -15,8 +15,13 @@ resource "aws_iam_role" "rds_slowquery_to_es" {
 }
 
 resource "aws_iam_role_policy_attachment" "rds_slowquery_to_es_aws_lambda_basic_execution_role" {
+   role       = aws_iam_role.rds_slowquery_to_es.name
+   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+resource "aws_iam_role_policy_attachment" "rds_slowquery_to_es_aws_lambda_vpc_access_execution_role" {
   role       = aws_iam_role.rds_slowquery_to_es.name
-  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
 }
 
 output "RdsSlowqueryToEsFunction_IAM_Role" {
