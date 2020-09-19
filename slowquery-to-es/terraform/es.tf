@@ -1,3 +1,25 @@
+data "aws_network_interfaces" "es_domain_slowquery" {
+  filter {
+    name   = "description"
+    values = ["ES slowquery"]
+  }
+}
+
+data "aws_network_interface" "es_domain_slowquery" {
+  for_each = toset(data.aws_network_interfaces.es_domain_slowquery.ids)
+  id       = each.value
+}
+
+
+output "es_slowquery" {
+  value = {
+    for i in data.aws_network_interfaces.es_domain_slowquery.ids :
+    i => {
+      private_ips = data.aws_network_interface.es_domain_slowquery[i].private_ip,
+    }
+  }
+}
+
 resource "aws_elasticsearch_domain" "slowquery" {
   domain_name           = "slowquery"
   elasticsearch_version = "7.7"
