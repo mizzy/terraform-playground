@@ -1,0 +1,1494 @@
+2020/09/26 11:30:03 [INFO] Terraform version: 0.13.3  
+2020/09/26 11:30:03 [INFO] Go runtime version: go1.14.4
+2020/09/26 11:30:03 [INFO] CLI args: []string{"/Users/mizzy/terraform", "plan"}
+2020/09/26 11:30:03 [DEBUG] Attempting to open CLI config file: /Users/mizzy/.terraformrc
+2020/09/26 11:30:03 Loading CLI configuration from /Users/mizzy/.terraformrc
+2020/09/26 11:30:03 [DEBUG] checking for credentials in "/Users/mizzy/.terraform.d/plugins"
+2020/09/26 11:30:03 [DEBUG] checking for credentials in "/Users/mizzy/.terraform.d/plugins/darwin_amd64"
+2020/09/26 11:30:03 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/09/26 11:30:03 [DEBUG] will search for provider plugins in /Users/mizzy/.terraform.d/plugins
+2020/09/26 11:30:03 [TRACE] getproviders.SearchLocalDirectory: /Users/mizzy/.terraform.d/plugins is a symlink to /Users/mizzy/.terraform.d/plugins
+2020/09/26 11:30:03 [DEBUG] ignoring non-existing provider search directory /Users/mizzy/Library/Application Support/io.terraform/plugins
+2020/09/26 11:30:03 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2020/09/26 11:30:03 [INFO] CLI command args: []string{"plan"}
+2020/09/26 11:30:03 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/09/26 11:30:03 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/09/26 11:30:03 [DEBUG] New state was assigned lineage "6a6f8cb1-2092-1b2c-a54a-90c5805a066c"
+2020/09/26 11:30:03 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/09/26 11:30:03 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/09/26 11:30:03 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2020/09/26 11:30:03 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2020/09/26 11:30:03 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/aws v3.8.0 for darwin_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64
+2020/09/26 11:30:03 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/aws 3.8.0
+2020/09/26 11:30:03 [DEBUG] checking for provisioner in "."
+2020/09/26 11:30:03 [DEBUG] checking for provisioner in "/Users/mizzy"
+2020/09/26 11:30:03 [DEBUG] checking for provisioner in "/Users/mizzy/.terraform.d/plugins"
+2020/09/26 11:30:03 [DEBUG] checking for provisioner in "/Users/mizzy/.terraform.d/plugins/darwin_amd64"
+2020/09/26 11:30:03 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2020/09/26 11:30:03 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/09/26 11:30:03 [INFO] backend/local: starting Plan operation
+2020/09/26 11:30:03 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/09/26 11:30:03 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/09/26 11:30:03 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/09/26 11:30:03 [TRACE] backend/local: reading remote state for workspace "default"
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/09/26 11:30:03 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/09/26 11:30:03 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/09/26 11:30:03 [TRACE] backend/local: building context for current working directory
+2020/09/26 11:30:03 [TRACE] terraform.NewContext: starting
+2020/09/26 11:30:03 [TRACE] terraform.NewContext: loading provider schemas
+2020/09/26 11:30:03 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/aws"
+2020-09-26T11:30:03.914+0900 [INFO]  plugin: configuring client automatic mTLS
+2020-09-26T11:30:03.932+0900 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5]
+2020-09-26T11:30:03.947+0900 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14642
+2020-09-26T11:30:03.947+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5
+2020-09-26T11:30:03.979+0900 [INFO]  plugin.terraform-provider-aws_v3.8.0_x5: configuring server automatic mTLS: timestamp=2020-09-26T11:30:03.979+0900
+2020-09-26T11:30:03.999+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: plugin address: address=/var/folders/94/3rqh294n4nl6j8njpqww7sv80000gn/T/plugin287819289 network=unix timestamp=2020-09-26T11:30:03.999+0900
+2020-09-26T11:30:03.999+0900 [DEBUG] plugin: using plugin: version=5
+2020/09/26 11:30:04 [TRACE] GRPCProvider: GetSchema
+2020-09-26T11:30:04.040+0900 [TRACE] plugin.stdio: waiting for stdio data
+2020/09/26 11:30:04 [TRACE] GRPCProvider: Close
+2020-09-26T11:30:04.155+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-09-26T11:30:04.158+0900 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14642
+2020-09-26T11:30:04.158+0900 [DEBUG] plugin: plugin exited
+2020/09/26 11:30:04 [TRACE] terraform.NewContext: complete
+2020/09/26 11:30:04 [TRACE] backend/local: finished building terraform.Context
+2020/09/26 11:30:04 [TRACE] backend/local: requesting interactive input, if necessary
+2020/09/26 11:30:04 [TRACE] Context.Input: Prompting for provider arguments
+2020/09/26 11:30:04 [TRACE] Context.Input: Provider provider.aws implied by resource block at main.tf:8,1-32
+2020/09/26 11:30:04 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/09/26 11:30:04 [TRACE] backend/local: running validation operation
+2020/09/26 11:30:04 [INFO] terraform: building graph: GraphTypeValidate
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/26 11:30:04 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/26 11:30:04 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching to "aws_iam_user.users" (*terraform.NodeValidatableResource) config from main.tf:8,1-32
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_iam_user.users
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching to "aws_iam_user_policy.policies" (*terraform.NodeValidatableResource) config from main.tf:13,1-42
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_iam_user_policy.policies
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_iam_policy_document.documents" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:19, Column:1, Byte:340}, End:hcl.Pos{Line:19, Column:43, Byte:382}}
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_iam_policy_document.documents
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/26 11:30:04 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/aws"], implied first by aws_iam_user_policy.policies
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/26 11:30:04 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_iam_user.users
+2020/09/26 11:30:04 [DEBUG] ProviderTransformer: "aws_iam_user.users" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_iam_user_policy.policies
+2020/09/26 11:30:04 [DEBUG] ProviderTransformer: "aws_iam_user_policy.policies" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_iam_policy_document.documents
+2020/09/26 11:30:04 [DEBUG] ProviderTransformer: "data.aws_iam_policy_document.documents" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_iam_user.users
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_iam_user_policy.policies
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_iam_policy_document.documents
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "aws_iam_user_policy.policies" references: [local.users (expand) data.aws_iam_policy_document.documents aws_iam_user.users]
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents" references: [local.users (expand) aws_iam_user.users]
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "local.users (expand)" references: []
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "aws_iam_user.users" references: [local.users (expand)]
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/26 11:30:04 [TRACE] attachDataDependenciesTransformer: data.aws_iam_policy_document.documents depends on []
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user.users - *terraform.NodeValidatableResource
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_iam_user.users - *terraform.NodeValidatableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+    data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+  data.aws_iam_policy_document.documents - *terraform.NodeValidatableResource
+    aws_iam_user.users - *terraform.NodeValidatableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user_policy.policies - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:04 [DEBUG] Starting graph walk: walkValidate
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "local.users (expand)"
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": starting visit (*terraform.nodeExpandLocal)
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": expanding dynamic subgraph
+2020/09/26 11:30:04 [TRACE] Expanding local: adding local.users as *terraform.NodeLocal
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": entering dynamic subgraph
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "local.users"
+2020/09/26 11:30:04 [TRACE] vertex "local.users": starting visit (*terraform.NodeLocal)
+2020/09/26 11:30:04 [TRACE] vertex "local.users": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: local.users
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalLocal
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalInitProvider
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: local.users
+2020/09/26 11:30:04 [TRACE] vertex "local.users": visit complete
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": visit complete
+2020-09-26T11:30:04.160+0900 [INFO]  plugin: configuring client automatic mTLS
+2020-09-26T11:30:04.177+0900 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5]
+2020-09-26T11:30:04.193+0900 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14643
+2020-09-26T11:30:04.193+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5
+2020-09-26T11:30:04.220+0900 [INFO]  plugin.terraform-provider-aws_v3.8.0_x5: configuring server automatic mTLS: timestamp=2020-09-26T11:30:04.220+0900
+2020-09-26T11:30:04.241+0900 [DEBUG] plugin: using plugin: version=5
+2020-09-26T11:30:04.241+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: plugin address: address=/var/folders/94/3rqh294n4nl6j8njpqww7sv80000gn/T/plugin180945574 network=unix timestamp=2020-09-26T11:30:04.241+0900
+2020/09/26 11:30:04 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalGetProvider
+2020-09-26T11:30:04.278+0900 [TRACE] plugin.stdio: waiting for stdio data
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalValidateProvider
+2020/09/26 11:30:04 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: no configuration at all
+2020/09/26 11:30:04 [TRACE] GRPCProvider: GetSchema
+2020/09/26 11:30:04 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/09/26 11:30:04 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:04 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:04 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "aws_iam_user.users"
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user.users": starting visit (*terraform.NodeValidatableResource)
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user.users": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: aws_iam_user.users
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/26 11:30:04 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: aws_iam_user.users
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user.users": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents"
+2020/09/26 11:30:04 [TRACE] vertex "data.aws_iam_policy_document.documents": starting visit (*terraform.NodeValidatableResource)
+2020/09/26 11:30:04 [TRACE] vertex "data.aws_iam_policy_document.documents": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: data.aws_iam_policy_document.documents
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/26 11:30:04 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: data.aws_iam_policy_document.documents
+2020/09/26 11:30:04 [TRACE] vertex "data.aws_iam_policy_document.documents": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "aws_iam_user_policy.policies"
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user_policy.policies": starting visit (*terraform.NodeValidatableResource)
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user_policy.policies": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: aws_iam_user_policy.policies
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/26 11:30:04 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: aws_iam_user_policy.policies
+2020/09/26 11:30:04 [TRACE] vertex "aws_iam_user_policy.policies": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/09/26 11:30:04 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/09/26 11:30:04 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/09/26 11:30:04 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/26 11:30:04 [TRACE] GRPCProvider: Close
+2020-09-26T11:30:04.453+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-09-26T11:30:04.456+0900 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14643
+2020-09-26T11:30:04.456+0900 [DEBUG] plugin: plugin exited
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:04 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/26 11:30:04 [TRACE] vertex "root": evaluating
+2020/09/26 11:30:04 [TRACE] [walkValidate] Entering eval tree: root
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:04 [TRACE] [walkValidate] Exiting eval tree: root
+2020/09/26 11:30:04 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:04 ****** refresh start
+2020/09/26 11:30:04 [INFO] backend/local: plan calling Refresh
+2020/09/26 11:30:04 [INFO] terraform: building graph: GraphTypeRefresh
+2020/09/26 11:30:04 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/26 11:30:04 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/26 11:30:04 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_iam_policy_document.documents (expand)" (*terraform.nodeExpandRefreshableDataResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:19, Column:1, Byte:340}, End:hcl.Pos{Line:19, Column:43, Byte:382}}
+2020/09/26 11:30:04 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/26 11:30:04 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/aws"], implied first by data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/26 11:30:04 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:04 [DEBUG] ProviderTransformer: "data.aws_iam_policy_document.documents (expand)" (*terraform.nodeExpandRefreshableDataResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/26 11:30:04 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "local.users (expand)" references: []
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:04 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:04 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents (expand)" references: [local.users (expand)]
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/26 11:30:04 [TRACE] attachDataDependenciesTransformer: data.aws_iam_policy_document.documents depends on []
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:04 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/26 11:30:04 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandRefreshableDataResource
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:04 [DEBUG] Starting graph walk: walkRefresh
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "local.users (expand)"
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": starting visit (*terraform.nodeExpandLocal)
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": expanding dynamic subgraph
+2020/09/26 11:30:04 [TRACE] Expanding local: adding local.users as *terraform.NodeLocal
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": entering dynamic subgraph
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/26 11:30:04 [TRACE] dag/walk: visiting "local.users"
+2020/09/26 11:30:04 [TRACE] vertex "local.users": starting visit (*terraform.NodeLocal)
+2020/09/26 11:30:04 [TRACE] vertex "local.users": evaluating
+2020/09/26 11:30:04 [TRACE] [walkRefresh] Entering eval tree: local.users
+2020/09/26 11:30:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalLocal
+2020/09/26 11:30:04 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalInitProvider
+2020/09/26 11:30:04 [TRACE] [walkRefresh] Exiting eval tree: local.users
+2020/09/26 11:30:04 [TRACE] vertex "local.users": visit complete
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:04 [TRACE] vertex "local.users (expand)": visit complete
+2020-09-26T11:30:04.458+0900 [INFO]  plugin: configuring client automatic mTLS
+2020-09-26T11:30:04.475+0900 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5]
+2020-09-26T11:30:04.493+0900 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14645
+2020-09-26T11:30:04.493+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5
+2020-09-26T11:30:04.525+0900 [INFO]  plugin.terraform-provider-aws_v3.8.0_x5: configuring server automatic mTLS: timestamp=2020-09-26T11:30:04.524+0900
+2020-09-26T11:30:04.546+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: plugin address: address=/var/folders/94/3rqh294n4nl6j8njpqww7sv80000gn/T/plugin460318216 network=unix timestamp=2020-09-26T11:30:04.546+0900
+2020-09-26T11:30:04.546+0900 [DEBUG] plugin: using plugin: version=5
+2020/09/26 11:30:04 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:04 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:04 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/26 11:30:04 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: no configuration at all
+2020/09/26 11:30:04 [TRACE] GRPCProvider: GetSchema
+2020-09-26T11:30:04.586+0900 [TRACE] plugin.stdio: waiting for stdio data
+2020/09/26 11:30:04 [TRACE] GRPCProvider: Configure
+2020-09-26T11:30:04.704+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:04 [INFO] AWS Auth provider used: "EnvProvider"
+2020-09-26T11:30:04.704+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:04 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:04 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: sts.amazonaws.com
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 43
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=cdc51e3b64c7783440dce91bdf63efa73e964f1b28782c2fb1a5e36d364d8c68
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023004Z
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=GetCallerIdentity&Version=2011-06-15
+2020-09-26T11:30:04.705+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:05 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 402
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:04 GMT
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: 9ceecc46-d5a1-46d5-9f4e-775416c9e368
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:05 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <GetCallerIdentityResult>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Arn>arn:aws:iam::019115212452:user/mizzy</Arn>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <UserId>AIDAINQ523TXKEN5O5STY</UserId>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Account>019115212452</Account>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </GetCallerIdentityResult>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <ResponseMetadata>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <RequestId>9ceecc46-d5a1-46d5-9f4e-775416c9e368</RequestId>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </ResponseMetadata>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </GetCallerIdentityResponse>
+2020-09-26T11:30:05.508+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:05 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:05 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: sts.amazonaws.com
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 43
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=b8f66c9bc8325451a8b5a413a75993a75ee9edf0ad0ac372b46138f60c732736
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023005Z
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=GetCallerIdentity&Version=2011-06-15
+2020-09-26T11:30:05.509+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 402
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:05 GMT
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: 37591a5b-7eac-4d75-9a26-22d604c6605c
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <GetCallerIdentityResult>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Arn>arn:aws:iam::019115212452:user/mizzy</Arn>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <UserId>AIDAINQ523TXKEN5O5STY</UserId>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Account>019115212452</Account>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </GetCallerIdentityResult>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <ResponseMetadata>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <RequestId>37591a5b-7eac-4d75-9a26-22d604c6605c</RequestId>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </ResponseMetadata>
+2020-09-26T11:30:06.176+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </GetCallerIdentityResponse>
+2020-09-26T11:30:06.181+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAccountAttributes Details:
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: ec2.ap-northeast-1.amazonaws.com
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 87
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/ap-northeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=e5c6f027311affb5dface05e998c1ab919ae0db874cfc3c3055ed43dc320f00d
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023006Z
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+2020-09-26T11:30:06.182+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAccountAttributes Details:
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 540
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml;charset=UTF-8
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:05 GMT
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Server: AmazonEC2
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: d9343abe-b4bd-4c57-9c0a-1768861d5b1b
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: <DescribeAccountAttributesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <requestId>d9343abe-b4bd-4c57-9c0a-1768861d5b1b</requestId>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <accountAttributeSet>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:         <item>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             <attributeName>supported-platforms</attributeName>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             <attributeValueSet>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                 <item>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                     <attributeValue>VPC</attributeValue>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                 </item>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             </attributeValueSet>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:         </item>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     </accountAttributeSet>
+2020-09-26T11:30:06.299+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </DescribeAccountAttributesResponse>
+2020/09/26 11:30:06 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents (expand)"
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": starting visit (*terraform.nodeExpandRefreshableDataResource)
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": expanding dynamic subgraph
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": entering dynamic subgraph
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents"
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents": starting visit (*terraform.NodeRefreshableDataResource)
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents": expanding dynamic subgraph
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/26 11:30:06 [TRACE] ResourceCountTransformer: adding data.aws_iam_policy_document.documents["bar"] as *terraform.NodeRefreshableDataResourceInstance
+2020/09/26 11:30:06 [TRACE] ResourceCountTransformer: adding data.aws_iam_policy_document.documents["foo"] as *terraform.NodeRefreshableDataResourceInstance
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.aws_iam_policy_document.documents["bar"] - *terraform.NodeRefreshableDataResourceInstance
+  data.aws_iam_policy_document.documents["foo"] - *terraform.NodeRefreshableDataResourceInstance
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:06 [DEBUG] Resource state not found for node "data.aws_iam_policy_document.documents[\"bar\"]", instance data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [DEBUG] Resource state not found for node "data.aws_iam_policy_document.documents[\"foo\"]", instance data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents[\"foo\"]" references: []
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents[\"bar\"]" references: []
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  data.aws_iam_policy_document.documents["bar"] - *terraform.NodeRefreshableDataResourceInstance
+  data.aws_iam_policy_document.documents["foo"] - *terraform.NodeRefreshableDataResourceInstance
+  root - terraform.graphNodeRoot
+    data.aws_iam_policy_document.documents["bar"] - *terraform.NodeRefreshableDataResourceInstance
+    data.aws_iam_policy_document.documents["foo"] - *terraform.NodeRefreshableDataResourceInstance
+  ------
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents": entering dynamic subgraph
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents[\"foo\"]"
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents[\"bar\"]"
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": evaluating
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": evaluating
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Entering eval tree: data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Entering eval tree: data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:06 [TRACE] EvalReadState: reading state for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] EvalReadState: no state present for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.evalReadDataRefresh
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:06 [TRACE] EvalReadState: reading state for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] EvalReadState: no state present for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.evalReadDataRefresh
+2020/09/26 11:30:06 [TRACE] evalReadDataRefresh: data.aws_iam_policy_document.documents["foo"] configuration not fully known yet, so deferring to apply phase
+2020/09/26 11:30:06 [TRACE] evalReadDataRefresh: data.aws_iam_policy_document.documents["bar"] configuration not fully known yet, so deferring to apply phase
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalIf
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalIf
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:06 [TRACE] EvalWriteDiff: recorded Read change for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:06 [TRACE] EvalWriteState: removing state object for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Exiting eval tree: data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": visit complete
+2020/09/26 11:30:06 [TRACE] EvalWriteDiff: recorded Read change for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:06 [TRACE] EvalWriteState: removing state object for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Exiting eval tree: data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": visit complete
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:06 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/09/26 11:30:06 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents": dynamic subgraph completed successfully
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents": visit complete
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:06 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": visit complete
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/26 11:30:06 [TRACE] GRPCProvider: Close
+2020-09-26T11:30:06.303+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-09-26T11:30:06.307+0900 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14645
+2020-09-26T11:30:06.307+0900 [DEBUG] plugin: plugin exited
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:06 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/26 11:30:06 [TRACE] vertex "root": evaluating
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Entering eval tree: root
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:06 [TRACE] [walkRefresh] Exiting eval tree: root
+2020/09/26 11:30:06 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:06 ****** refresh end
+2020/09/26 11:30:06 [INFO] backend/local: plan calling Plan
+2020/09/26 11:30:06 [INFO] terraform: building graph: GraphTypePlan
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/26 11:30:06 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/26 11:30:06 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching to "aws_iam_user.users (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:8,1-32
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_iam_user.users (expand)
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching to "aws_iam_user_policy.policies (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:13,1-42
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to aws_iam_user_policy.policies (expand)
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_iam_policy_document.documents (expand)" (*terraform.nodeExpandPlannableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:19, Column:1, Byte:340}, End:hcl.Pos{Line:19, Column:43, Byte:382}}
+2020/09/26 11:30:06 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  ------
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/26 11:30:06 [DEBUG] adding implicit provider configuration provider["registry.terraform.io/hashicorp/aws"], implied first by aws_iam_user.users (expand)
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/26 11:30:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:06 [DEBUG] ProviderTransformer: "data.aws_iam_policy_document.documents (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_iam_user.users (expand)
+2020/09/26 11:30:06 [DEBUG] ProviderTransformer: "aws_iam_user.users (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/aws"] serving aws_iam_user_policy.policies (expand)
+2020/09/26 11:30:06 [DEBUG] ProviderTransformer: "aws_iam_user_policy.policies (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/26 11:30:06 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/26 11:30:06 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_iam_user_policy.policies (expand)
+2020/09/26 11:30:06 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_iam_policy_document.documents (expand)
+2020/09/26 11:30:06 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_iam_user.users (expand)
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "aws_iam_user.users (expand)" references: [local.users (expand)]
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "aws_iam_user_policy.policies (expand)" references: [local.users (expand) data.aws_iam_policy_document.documents (expand) aws_iam_user.users (expand)]
+2020/09/26 11:30:06 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents (expand)" references: [local.users (expand) aws_iam_user.users (expand)]
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "local.users (expand)" references: []
+2020/09/26 11:30:06 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/aws\"]" references: []
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/26 11:30:06 [TRACE] attachDataDependenciesTransformer: data.aws_iam_policy_document.documents depends on []
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/26 11:30:06 [TRACE] ForcedCBDTransformer: "aws_iam_user.users (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/26 11:30:06 [TRACE] ForcedCBDTransformer: "aws_iam_user_policy.policies (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/26 11:30:06 [TRACE] ForcedCBDTransformer: "data.aws_iam_policy_document.documents (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:06 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/26 11:30:06 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+    local.users (expand) - *terraform.nodeExpandLocal
+    provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+    data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+  data.aws_iam_policy_document.documents (expand) - *terraform.nodeExpandPlannableResource
+    aws_iam_user.users (expand) - *terraform.nodeExpandPlannableResource
+  local.users (expand) - *terraform.nodeExpandLocal
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/aws"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+    aws_iam_user_policy.policies (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/aws"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/26 11:30:06 [DEBUG] Starting graph walk: walkPlan
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "local.users (expand)"
+2020/09/26 11:30:06 [TRACE] vertex "local.users (expand)": starting visit (*terraform.nodeExpandLocal)
+2020/09/26 11:30:06 [TRACE] vertex "local.users (expand)": expanding dynamic subgraph
+2020/09/26 11:30:06 [TRACE] Expanding local: adding local.users as *terraform.NodeLocal
+2020/09/26 11:30:06 [TRACE] vertex "local.users (expand)": entering dynamic subgraph
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "local.users"
+2020/09/26 11:30:06 [TRACE] vertex "local.users": starting visit (*terraform.NodeLocal)
+2020/09/26 11:30:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"]"
+2020/09/26 11:30:06 [TRACE] vertex "local.users": evaluating
+2020/09/26 11:30:06 [TRACE] [walkPlan] Entering eval tree: local.users
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalLocal
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/26 11:30:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": evaluating
+2020/09/26 11:30:06 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalInitProvider
+2020/09/26 11:30:06 [TRACE] [walkPlan] Exiting eval tree: local.users
+2020/09/26 11:30:06 [TRACE] vertex "local.users": visit complete
+2020/09/26 11:30:06 [TRACE] vertex "local.users (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:06 [TRACE] vertex "local.users (expand)": visit complete
+2020-09-26T11:30:06.309+0900 [INFO]  plugin: configuring client automatic mTLS
+2020-09-26T11:30:06.330+0900 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5]
+2020-09-26T11:30:06.348+0900 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14656
+2020-09-26T11:30:06.348+0900 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5
+2020-09-26T11:30:06.382+0900 [INFO]  plugin.terraform-provider-aws_v3.8.0_x5: configuring server automatic mTLS: timestamp=2020-09-26T11:30:06.382+0900
+2020-09-26T11:30:06.401+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: plugin address: address=/var/folders/94/3rqh294n4nl6j8njpqww7sv80000gn/T/plugin000743655 network=unix timestamp=2020-09-26T11:30:06.401+0900
+2020-09-26T11:30:06.401+0900 [DEBUG] plugin: using plugin: version=5
+2020/09/26 11:30:06 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/aws\"]" provider for provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:06 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:06 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/26 11:30:06 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/aws"]: no configuration at all
+2020/09/26 11:30:06 [TRACE] GRPCProvider: GetSchema
+2020-09-26T11:30:06.438+0900 [TRACE] plugin.stdio: waiting for stdio data
+2020/09/26 11:30:06 [TRACE] GRPCProvider: Configure
+2020-09-26T11:30:06.555+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [INFO] AWS Auth provider used: "EnvProvider"
+2020-09-26T11:30:06.556+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:06 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: sts.amazonaws.com
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 43
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=99e1416ac1e9113933d4042ed6cc7640d38c33d5f8e85693e95f3c9d5e3db884
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023006Z
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=GetCallerIdentity&Version=2011-06-15
+2020-09-26T11:30:06.557+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:07 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 402
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:06 GMT
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: 049f4c9f-6754-4eb0-99d9-276d3184db9a
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:07 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <GetCallerIdentityResult>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Arn>arn:aws:iam::019115212452:user/mizzy</Arn>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <UserId>AIDAINQ523TXKEN5O5STY</UserId>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Account>019115212452</Account>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </GetCallerIdentityResult>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <ResponseMetadata>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <RequestId>049f4c9f-6754-4eb0-99d9-276d3184db9a</RequestId>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </ResponseMetadata>
+2020-09-26T11:30:07.355+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </GetCallerIdentityResponse>
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:07 [DEBUG] Trying to get account information via sts:GetCallerIdentity
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:07 [DEBUG] [aws-sdk-go] DEBUG: Request sts/GetCallerIdentity Details:
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: sts.amazonaws.com
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 43
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/us-east-1/sts/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=0435ad7f98f76b5a2308ae3353312928d028d6a59115d44e0925e5dec8283363
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023007Z
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=GetCallerIdentity&Version=2011-06-15
+2020-09-26T11:30:07.356+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:08 [DEBUG] [aws-sdk-go] DEBUG: Response sts/GetCallerIdentity Details:
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 402
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:07 GMT
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: 08381d68-47ad-4041-8e2e-161f3e0372e4
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:08 [DEBUG] [aws-sdk-go] <GetCallerIdentityResponse xmlns="https://sts.amazonaws.com/doc/2011-06-15/">
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <GetCallerIdentityResult>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Arn>arn:aws:iam::019115212452:user/mizzy</Arn>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <UserId>AIDAINQ523TXKEN5O5STY</UserId>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <Account>019115212452</Account>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </GetCallerIdentityResult>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   <ResponseMetadata>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <RequestId>08381d68-47ad-4041-8e2e-161f3e0372e4</RequestId>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:   </ResponseMetadata>
+2020-09-26T11:30:08.022+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </GetCallerIdentityResponse>
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:08 [DEBUG] [aws-sdk-go] DEBUG: Request ec2/DescribeAccountAttributes Details:
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ REQUEST POST-SIGN ]-----------------------------
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: POST / HTTP/1.1
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Host: ec2.ap-northeast-1.amazonaws.com
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: User-Agent: aws-sdk-go/1.34.26 (go1.14.5; darwin; amd64) APN/1.0 HashiCorp/1.0 Terraform/0.13.3 (+https://www.terraform.io)
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 87
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Authorization: AWS4-HMAC-SHA256 Credential=AKIAIETNQVTSE4JSFPZA/20200926/ap-northeast-1/ec2/aws4_request, SignedHeaders=content-length;content-type;host;x-amz-date, Signature=be12ddbcba640e34af8e128ea4496bc2d531ef264ef7676950f29fbcdb5debb2
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: application/x-www-form-urlencoded; charset=utf-8
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amz-Date: 20200926T023008Z
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Accept-Encoding: gzip
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Action=DescribeAccountAttributes&AttributeName.1=supported-platforms&Version=2016-11-15
+2020-09-26T11:30:08.029+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:08 [DEBUG] [aws-sdk-go] DEBUG: Response ec2/DescribeAccountAttributes Details:
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: ---[ RESPONSE ]--------------------------------------
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: HTTP/1.1 200 OK
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Connection: close
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Length: 540
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Content-Type: text/xml;charset=UTF-8
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Date: Sat, 26 Sep 2020 02:30:07 GMT
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: Server: AmazonEC2
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: X-Amzn-Requestid: ea8c8e47-44ef-4f42-a108-04bde739fc95
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: -----------------------------------------------------
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: 2020/09/26 11:30:08 [DEBUG] [aws-sdk-go] <?xml version="1.0" encoding="UTF-8"?>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: <DescribeAccountAttributesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <requestId>ea8c8e47-44ef-4f42-a108-04bde739fc95</requestId>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     <accountAttributeSet>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:         <item>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             <attributeName>supported-platforms</attributeName>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             <attributeValueSet>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                 <item>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                     <attributeValue>VPC</attributeValue>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:                 </item>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:             </attributeValueSet>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:         </item>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5:     </accountAttributeSet>
+2020-09-26T11:30:08.157+0900 [DEBUG] plugin.terraform-provider-aws_v3.8.0_x5: </DescribeAccountAttributesResponse>
+2020/09/26 11:30:08 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"]
+2020/09/26 11:30:08 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"]": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user.users (expand)"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users (expand)": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users (expand)": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user.users"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": starting visit (*terraform.NodePlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user.users
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user.users
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding aws_iam_user.users["bar"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding aws_iam_user.users["foo"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_iam_user.users["bar"] - *terraform.NodePlannableResourceInstance
+  aws_iam_user.users["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "aws_iam_user.users[\"bar\"]", instance aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "aws_iam_user.users[\"foo\"]", instance aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "aws_iam_user.users[\"bar\"]" references: []
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "aws_iam_user.users[\"foo\"]" references: []
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  aws_iam_user.users["bar"] - *terraform.NodePlannableResourceInstance
+  aws_iam_user.users["foo"] - *terraform.NodePlannableResourceInstance
+  root - terraform.graphNodeRoot
+    aws_iam_user.users["bar"] - *terraform.NodePlannableResourceInstance
+    aws_iam_user.users["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user.users[\"foo\"]"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"foo\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"foo\"]": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user.users[\"bar\"]"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"bar\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"bar\"]": evaluating
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalDiff
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalDiff
+2020/09/26 11:30:08 [TRACE] Re-validating config for "aws_iam_user.users[\"foo\"]"
+2020/09/26 11:30:08 [TRACE] Re-validating config for "aws_iam_user.users[\"bar\"]"
+2020/09/26 11:30:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/26 11:30:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/26 11:30:08 [WARN] Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_iam_user.users["foo"], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .force_destroy: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .path: planned value cty.StringVal("/") does not match config value cty.NullVal(cty.String)
+2020/09/26 11:30:08 [WARN] Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_iam_user.users["bar"], but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .force_destroy: planned value cty.False does not match config value cty.NullVal(cty.Bool)
+      - .path: planned value cty.StringVal("/") does not match config value cty.NullVal(cty.String)
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Create change for aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Create change for aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user.users["foo"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user.users["bar"]
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"foo\"]": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users[\"bar\"]": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:08 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/09/26 11:30:08 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user.users (expand)": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents (expand)"
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents"
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": starting visit (*terraform.NodePlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: data.aws_iam_policy_document.documents
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: data.aws_iam_policy_document.documents
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding data.aws_iam_policy_document.documents["bar"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding data.aws_iam_policy_document.documents["foo"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.aws_iam_policy_document.documents["bar"] - *terraform.NodePlannableResourceInstance
+  data.aws_iam_policy_document.documents["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "data.aws_iam_policy_document.documents[\"bar\"]", instance data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "data.aws_iam_policy_document.documents[\"foo\"]", instance data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents[\"foo\"]" references: []
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.documents[\"bar\"]" references: []
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  data.aws_iam_policy_document.documents["bar"] - *terraform.NodePlannableResourceInstance
+  data.aws_iam_policy_document.documents["foo"] - *terraform.NodePlannableResourceInstance
+  root - terraform.graphNodeRoot
+    data.aws_iam_policy_document.documents["bar"] - *terraform.NodePlannableResourceInstance
+    data.aws_iam_policy_document.documents["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents[\"foo\"]"
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.documents[\"bar\"]"
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": evaluating
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] eval: *terraform.evalReadDataPlan
+2020/09/26 11:30:08 [TRACE] eval: *terraform.evalReadDataPlan
+2020/09/26 11:30:08 [TRACE] evalReadDataPlan: data.aws_iam_policy_document.documents["bar"] configuration not fully known yet, so deferring to apply phase
+2020/09/26 11:30:08 [TRACE] evalReadDataPlan: data.aws_iam_policy_document.documents["foo"] configuration not fully known yet, so deferring to apply phase
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Read change for data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: data.aws_iam_policy_document.documents["bar"]
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"bar\"]": visit complete
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Read change for data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: data.aws_iam_policy_document.documents["foo"]
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents[\"foo\"]": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:08 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/09/26 11:30:08 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "data.aws_iam_policy_document.documents (expand)": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user_policy.policies (expand)"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies (expand)": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies (expand)": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user_policy.policies"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": starting visit (*terraform.NodePlannableResource)
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user_policy.policies
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user_policy.policies
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": expanding dynamic subgraph
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding aws_iam_user_policy.policies["bar"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] ResourceCountTransformer: adding aws_iam_user_policy.policies["foo"] as *terraform.NodePlannableResourceInstance
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  aws_iam_user_policy.policies["bar"] - *terraform.NodePlannableResourceInstance
+  aws_iam_user_policy.policies["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "aws_iam_user_policy.policies[\"bar\"]", instance aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [DEBUG] Resource instance state not found for node "aws_iam_user_policy.policies[\"foo\"]", instance aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "data.aws_iam_policy_document.documents"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "aws_iam_user_policy.policies[\"bar\"]" references: []
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "local.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "data.aws_iam_policy_document.documents"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "aws_iam_user.users"
+2020/09/26 11:30:08 [WARN] ReferenceTransformer: reference not found: "each.value"
+2020/09/26 11:30:08 [DEBUG] ReferenceTransformer: "aws_iam_user_policy.policies[\"foo\"]" references: []
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/26 11:30:08 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/26 11:30:08 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  aws_iam_user_policy.policies["bar"] - *terraform.NodePlannableResourceInstance
+  aws_iam_user_policy.policies["foo"] - *terraform.NodePlannableResourceInstance
+  root - terraform.graphNodeRoot
+    aws_iam_user_policy.policies["bar"] - *terraform.NodePlannableResourceInstance
+    aws_iam_user_policy.policies["foo"] - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": entering dynamic subgraph
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user_policy.policies[\"foo\"]"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"foo\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "aws_iam_user_policy.policies[\"bar\"]"
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"foo\"]": evaluating
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"bar\"]": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"bar\"]": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalReadState
+2020/09/26 11:30:08 [TRACE] EvalReadState: reading state for aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalDiff
+2020/09/26 11:30:08 [TRACE] EvalReadState: no state present for aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalDiff
+2020/09/26 11:30:08 [TRACE] Re-validating config for "aws_iam_user_policy.policies[\"foo\"]"
+2020/09/26 11:30:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:08 [TRACE] Re-validating config for "aws_iam_user_policy.policies[\"bar\"]"
+2020/09/26 11:30:08 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/26 11:30:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/26 11:30:08 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteState
+2020/09/26 11:30:08 [TRACE] EvalWriteState: writing current state object for aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Create change for aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user_policy.policies["bar"]
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"bar\"]": visit complete
+2020/09/26 11:30:08 [TRACE] EvalWriteDiff: recorded Create change for aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: aws_iam_user_policy.policies["foo"]
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies[\"foo\"]": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:08 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/09/26 11:30:08 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies": visit complete
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies (expand)": dynamic subgraph completed successfully
+2020/09/26 11:30:08 [TRACE] vertex "aws_iam_user_policy.policies (expand)": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/aws\"] (close)"
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/09/26 11:30:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/09/26 11:30:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/09/26 11:30:08 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/09/26 11:30:08 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/26 11:30:08 [TRACE] GRPCProvider: Close
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/09/26 11:30:08 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-09-26T11:30:08.163+0900 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2020-09-26T11:30:08.167+0900 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/aws/3.8.0/darwin_amd64/terraform-provider-aws_v3.8.0_x5 pid=14656
+2020-09-26T11:30:08.167+0900 [DEBUG] plugin: plugin exited
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/aws"] (close)
+2020/09/26 11:30:08 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/aws\"] (close)": visit complete
+2020/09/26 11:30:08 [TRACE] dag/walk: visiting "root"
+2020/09/26 11:30:08 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/26 11:30:08 [TRACE] vertex "root": evaluating
+2020/09/26 11:30:08 [TRACE] [walkPlan] Entering eval tree: root
+2020/09/26 11:30:08 [TRACE] eval: *terraform.EvalSequence
+2020/09/26 11:30:08 [TRACE] eval: terraform.EvalNoop
+2020/09/26 11:30:08 [TRACE] [walkPlan] Exiting eval tree: root
+2020/09/26 11:30:08 [TRACE] vertex "root": visit complete
+2020/09/26 11:30:08 [INFO] backend/local: plan operation completed
+2020/09/26 11:30:08 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/09/26 11:30:08 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock

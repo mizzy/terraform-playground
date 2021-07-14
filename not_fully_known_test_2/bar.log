@@ -1,0 +1,69 @@
+2020/09/25 20:12:05 [TRACE] ResourceCountTransformer: adding aws_organizations_account.users["bar"] as *terraform.NodeRefreshableManagedResourceInstance
+  aws_organizations_account.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:05 [DEBUG] Resource instance state not found for node "aws_organizations_account.users[\"bar\"]", instance aws_organizations_account.users["bar"]
+  aws_organizations_account.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+    aws_organizations_account.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:05 [TRACE] dag/walk: visiting "aws_organizations_account.users[\"bar\"]"
+2020/09/25 20:12:05 [TRACE] vertex "aws_organizations_account.users[\"bar\"]": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/09/25 20:12:05 [TRACE] ResourceCountTransformer: adding aws_iam_user.users["bar"] as *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:05 [TRACE] NodeRefreshableManagedResourceInstance: aws_organizations_account.users["bar"] has no existing state to refresh
+  aws_iam_user.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:05 [TRACE] vertex "aws_organizations_account.users[\"bar\"]": evaluating
+2020/09/25 20:12:05 [TRACE] [walkRefresh] Entering eval tree: aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [DEBUG] Resource instance state not found for node "aws_iam_user.users[\"bar\"]", instance aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalReadState: reading state for aws_organizations_account.users["bar"]
+  aws_iam_user.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+    aws_iam_user.users["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:05 [TRACE] EvalReadState: no state present for aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [TRACE] dag/walk: visiting "aws_iam_user.users[\"bar\"]"
+2020/09/25 20:12:05 [TRACE] vertex "aws_iam_user.users[\"bar\"]": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/09/25 20:12:05 [TRACE] NodeRefreshableManagedResourceInstance: aws_iam_user.users["bar"] has no existing state to refresh
+2020/09/25 20:12:05 [TRACE] vertex "aws_iam_user.users[\"bar\"]": evaluating
+2020/09/25 20:12:05 [TRACE] [walkRefresh] Entering eval tree: aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalReadState: reading state for aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalReadState: no state present for aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] Re-validating config for "aws_organizations_account.users[\"bar\"]"
+2020/09/25 20:12:05 [TRACE] Re-validating config for "aws_iam_user.users[\"bar\"]"
+2020/09/25 20:12:05 [WARN] Provider "registry.terraform.io/hashicorp/aws" produced an invalid plan for aws_iam_user.users["bar"], but we are tolerating it because it is using the legacy plugin SDK.
+2020/09/25 20:12:05 [TRACE] EvalWriteState: recording 0 dependencies for aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalWriteState: writing current state object for aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalWriteState: recording 0 dependencies for aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalWriteState: writing current state object for aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [TRACE] EvalWriteDiff: recorded Create change for aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] [walkRefresh] Exiting eval tree: aws_iam_user.users["bar"]
+2020/09/25 20:12:05 [TRACE] vertex "aws_iam_user.users[\"bar\"]": visit complete
+2020/09/25 20:12:05 [TRACE] EvalWriteDiff: recorded Create change for aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [TRACE] [walkRefresh] Exiting eval tree: aws_organizations_account.users["bar"]
+2020/09/25 20:12:05 [TRACE] vertex "aws_organizations_account.users[\"bar\"]": visit complete
+2020/09/25 20:12:08 [TRACE] ResourceCountTransformer: adding data.aws_iam_policy_document.switch_role_to_users_account["bar"] as *terraform.NodeRefreshableDataResourceInstance
+  data.aws_iam_policy_document.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableDataResourceInstance
+2020/09/25 20:12:08 [DEBUG] Resource instance state not found for node "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]", instance data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [DEBUG] ReferenceTransformer: "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]" references: []
+  data.aws_iam_policy_document.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableDataResourceInstance
+    data.aws_iam_policy_document.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableDataResourceInstance
+2020/09/25 20:12:08 [TRACE] dag/walk: visiting "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]"
+2020/09/25 20:12:08 [TRACE] vertex "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/09/25 20:12:08 [TRACE] vertex "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]": evaluating
+2020/09/25 20:12:08 [TRACE] [walkRefresh] Entering eval tree: data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] EvalReadState: reading state for data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] EvalReadState: no state present for data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] evalReadDataRefresh: data.aws_iam_policy_document.switch_role_to_users_account["bar"] configuration not fully known yet, so deferring to apply phase
+2020/09/25 20:12:08 [TRACE] EvalWriteDiff: recorded Read change for data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] EvalWriteState: removing state object for data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] [walkRefresh] Exiting eval tree: data.aws_iam_policy_document.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] vertex "data.aws_iam_policy_document.switch_role_to_users_account[\"bar\"]": visit complete
+2020/09/25 20:12:08 [TRACE] ResourceCountTransformer: adding aws_iam_user_policy.switch_role_to_users_account["bar"] as *terraform.NodeRefreshableManagedResourceInstance
+  aws_iam_user_policy.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:08 [DEBUG] Resource instance state not found for node "aws_iam_user_policy.switch_role_to_users_account[\"bar\"]", instance aws_iam_user_policy.switch_role_to_users_account["bar"]
+  aws_iam_user_policy.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+    aws_iam_user_policy.switch_role_to_users_account["bar"] - *terraform.NodeRefreshableManagedResourceInstance
+2020/09/25 20:12:08 [TRACE] dag/walk: visiting "aws_iam_user_policy.switch_role_to_users_account[\"bar\"]"
+2020/09/25 20:12:08 [TRACE] vertex "aws_iam_user_policy.switch_role_to_users_account[\"bar\"]": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/09/25 20:12:08 [TRACE] NodeRefreshableManagedResourceInstance: aws_iam_user_policy.switch_role_to_users_account["bar"] has no existing state to refresh
+2020/09/25 20:12:08 [TRACE] vertex "aws_iam_user_policy.switch_role_to_users_account[\"bar\"]": evaluating
+2020/09/25 20:12:08 [TRACE] [walkRefresh] Entering eval tree: aws_iam_user_policy.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] EvalReadState: reading state for aws_iam_user_policy.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] EvalReadState: no state present for aws_iam_user_policy.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] [walkRefresh] Exiting eval tree: aws_iam_user_policy.switch_role_to_users_account["bar"]
+2020/09/25 20:12:08 [TRACE] vertex "aws_iam_user_policy.switch_role_to_users_account[\"bar\"]": visit complete
+    | each.value is "bar"
